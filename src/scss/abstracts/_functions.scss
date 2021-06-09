@@ -1,0 +1,9 @@
+@function theme-blue($opacity){
+  @return rgba(26, 153, 246,$opacity);
+}
+@function theme-black($opacity){
+  @return rgba(0, 0, 0,$opacity);
+}
+@function theme-purple($opacity){
+  @return rgba(128, 0, 128,$opacity);
+}

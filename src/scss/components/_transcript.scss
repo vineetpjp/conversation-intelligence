@@ -1,0 +1,114 @@
+.transcript-container{
+    margin-top: 3rem;
+}
+
+.conversation-container{
+    margin:1rem 0;
+@include flex-row-start;
+    transition: all 0.2s;
+    padding:10px 20px;
+    color: theme-black(0.7);
+
+&:hover,&--active{
+        background-color: theme-blue(0.05);
+    }
+
+&-lpadding{
+        padding-left: 7rem;
+        color: theme-black(1);
+    & .conversation-bar {
+            background-color: theme-purple(0.30);
+        }
+    .conversation-time{
+            color: theme-purple(1)
+        }
+    }
+
+&_share{
+        max-height:0;
+        transition: max-height 0.15s ease-out;
+        font-size: 1.4rem;
+        color:theme-blue(0.9);
+        overflow: hidden;
+        cursor:pointer;
+    }
+
+&:hover &_share{
+        max-height:1.4rem;
+        transition: max-height 0.2s ease-in;
+    }
+}
+
+.conversation-bar{
+    background-color: theme-blue(0.30);
+    padding:1px;
+    margin:0 10px;
+    border-radius: 5px;
+}
+
+.conversation-time{
+    font-size: 1.2rem;
+    padding:1rem 0;
+    color: theme-blue(1)
+}
+
+.conversation_sentence{
+    padding:1rem 0;
+    max-width:800px;
+}
+
+.conversation_word{
+    transition: all 0.3s;
+    border-radius: 2px;
+    padding:1px 0;
+    font-size: 1.5rem;
+    cursor:pointer;
+&:hover,&--active{
+        background-color: theme-blue(0.25);
+    }
+}
+
+.search_term{
+    background-color: yellow;
+}
+
+// search container
+.search{
+&-container{
+    @include flex-row-center;
+        margin:2rem 2rem;
+    }
+&-icon{
+        font-size: 1.7rem;
+        color: theme-black(0.3);
+    }
+&-input__container{
+        border:1px solid theme-black(0.2);
+        border-radius: 4px;
+        padding:4px 8px;
+    }
+&-input{
+        border:none;
+        outline: none;
+        font-size: 1.7rem;
+        color:theme-black(0.9);
+        padding:5px 10px;
+        width:350px
+    }
+&-text{
+        font-size: 1.3rem;
+        padding:10px 0 5px 10px;
+    }
+&-clear{
+        color:theme-blue(1);
+        cursor:pointer
+    }
+}
+@media only screen and (max-width: 600px){
+.search-container{
+        flex-direction:column ;
+    }
+.search-input{
+        width:auto;
+    }
+}

@@ -1,0 +1,112 @@
+//user percent=================
+.user-percent--container{
+  font-size: 1.5rem;
+}
+
+.user-percent{
+  padding:.5rem 0;
+  &:first-child{
+    color:theme-purple(1);
+  }
+  &:last-child{
+    color:theme-blue(1)
+  }
+  &--divider{
+    padding:1px;
+    background-color: theme-black(.1);
+  }
+}
+//waveform
+.waveform-container{
+  background-color: theme-black(0.01);
+  padding:2rem;
+  display: flex;
+  flex-direction: column;
+  //align-items: flex-start;
+  border-bottom: 1px solid theme-black(.1);
+}
+
+// time stamp ===============
+.time-stamp{
+  &-container{
+    align-self: flex-start;
+    display: block;
+    background-color: theme-black(0.05);
+    padding: .4rem 1rem;
+    font-size: 1.4rem;
+    color: #556C86;//theme-black(0.7);
+    border-radius: .3rem;
+    margin-bottom: 1.5rem;
+  }
+  &-duration{
+    color: theme-black(1);
+  }
+}
+
+.waveform-timebar-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wavebar-top-container{
+  display: flex;
+  flex:1;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.wavebar-container{
+  display: flex;
+  flex-direction: row;
+  flex:1;
+}
+
+
+.wavebar-start-line{
+  height:1.5rem;
+  padding:1px;
+  background-color: theme-black(.1);
+}
+
+.wavebar-row-container{
+  display: flex;
+  flex:1;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.single{
+  &-bar{
+    height:3rem;
+    margin-right:1px;
+  }
+  &-bar-fade{
+    background-color: theme-black(0.2);
+  }
+  &-bar-blue{
+    background-color: theme-blue(1);
+  }
+  &-bar-purple{
+    background-color: theme-purple(.7);
+  }
+  &-bar-transparent{
+    background-color: transparent;
+  }
+  &-bar-divider{
+    padding:1px;
+    margin:2px 0;
+    background-color: theme-black(0.1);
+  }
+  &-bar-divider__fade{
+    background-color: theme-black(0.7);
+  }
+}
+
+.wavebar-column-container{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+}
