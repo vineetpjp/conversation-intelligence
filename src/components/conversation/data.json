@@ -11,8 +11,8 @@
       { "startTime": "3.400s", "endTime": "3.900s", "word": "Isaacson" },
       { "startTime": "3.900s", "endTime": "4.100s", "word": "with" },
       { "startTime": "4.100s", "endTime": "4.500s", "word": "Guardian" },
-      { "startTime": "4.500s", "endTime": "4.500s", "word": "mortgage" },
-      { "startTime": "4.500s", "endTime": "5.400s", "word": "company" },
+      { "startTime": "4.500s", "endTime": "4.600s", "word": "mortgage" },
+      { "startTime": "4.600s", "endTime": "5.400s", "word": "company" },
       { "startTime": "5.400s", "endTime": "5.700s", "word": "at" },
       { "startTime": "5.700s", "endTime": "5.900s", "word": "the" },
       { "startTime": "5.900s", "endTime": "6.100s", "word": "sound" },
@@ -31,16 +31,16 @@
       { "startTime": "8.800s", "endTime": "9s", "word": "message," },
       { "startTime": "9s", "endTime": "9.600s", "word": "and" },
       { "startTime": "9.600s", "endTime": "10s", "word": "I" },
-      { "startTime": "10s", "endTime": "10s", "word": "will" },
-      { "startTime": "10s", "endTime": "10.400s", "word": "return" },
+      { "startTime": "10s", "endTime": "10.1s", "word": "will" },
+      { "startTime": "10.1s", "endTime": "10.400s", "word": "return" },
       { "startTime": "10.400s", "endTime": "10.600s", "word": "your" },
       { "startTime": "10.600s", "endTime": "10.900s", "word": "call." },
       { "startTime": "10.900s", "endTime": "11.400s", "word": "Thank" },
       { "startTime": "11.400s", "endTime": "11.500s", "word": "you." }
     ],
     [
-      { "startTime": "12.0s", "endTime": "12.800s", "word": "Sounds" },
-      { "startTime": "12.800s", "endTime": "12.9s", "word": "good" }
+      { "startTime": "12.8s", "endTime": "12.900s", "word": "Sounds" },
+      { "startTime": "12.900s", "endTime": "13.1s", "word": "good" }
     ]
   ]
 }

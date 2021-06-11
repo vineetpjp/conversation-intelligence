@@ -12,9 +12,10 @@ export class ConversationUtil {
     }
 
     static isWordActive(currentTime,wordInfo){
+        const roundedCurrentTime = Number(currentTime.toFixed(1));
         const startTime = ConversationUtil.getTimeAsNumber(wordInfo.startTime)
         const endTime = ConversationUtil.getTimeAsNumber(wordInfo.endTime)
-        return currentTime >= startTime && currentTime < endTime
+        return roundedCurrentTime >= startTime && roundedCurrentTime < endTime
     }
 
     static getTimeDifferenceOfSentence(sentence){
@@ -81,11 +82,13 @@ export class ConversationUtil {
         time = ''+time.toFixed(2);
         let [sec,msec] = time.split('.');
         sec = this.zeroPad(sec);
-        return sec+'.'+(msec?msec:'00');
+        return sec+':'+(msec?msec:'00');
     }
 
     static getMinMaxBarUsingWidth(width,duration){
-        const value = duration/width*10
+
+        const value = ((duration)/width)*4;
+
         return {
             min:value-0.1<0||0.1,
             max:value
@@ -105,21 +108,24 @@ export class ConversationUtil {
 
         if(minTime<min) minTime= min;
         if(minTime>max) minTime = max;
-        minTime=minTime.toFixed(1);
-        const totalBars = Math.round(duration/minTime);
+        minTime=minTime.toFixed(2);
+        const totalBars = Math.round((duration)/minTime);
 
         return [minTime,totalBars];
     }
+
     static isUserAtIndex(sentenceIndex,wordTimings,indexDuration){
 
         if(!wordTimings[sentenceIndex]){
             return [null,false];
         }
+
         const [startTime,endTime] = this.getStartAndEndTimeOfSentence(wordTimings[sentenceIndex]);
 
-        if(startTime<=indexDuration&&endTime>=indexDuration){
+        if(startTime<=indexDuration&&endTime>indexDuration){
             return [sentenceIndex,true];
         }
+
         if(indexDuration<endTime){
             return [sentenceIndex,false];
         }else{

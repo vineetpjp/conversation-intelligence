@@ -2,21 +2,26 @@ import React, { Component } from "react";
 import { ConversationUtil } from "../../../utils/ConversationUtil";
 import SingleConversation from "./SingleConversation";
 import TranscriptSearch from "./TranscriptSearch";
+
 class Transcript extends Component {
   constructor(props) {
     super(props);
     this.state = {
       word_timings: this.props.word_timings,
       input: "",
-      matchingTermNo: 0,
+      matchingTerm: {no:0,matchingWordStartTime:[]},
     };
   }
 
-  setMatchingTermNo = () => {
+  setMatchingTermNo = (startTime) => {
     this.setState((prevState) => {
+      const prevMatchingWordStartTime = prevState.matchingTerm.matchingWordStartTime
+      if(prevMatchingWordStartTime.includes(startTime)){
+        return prevState;
+      }
       return {
         ...prevState,
-        matchingTermNo: prevState.matchingTermNo + 1,
+        matchingTerm: {no:prevState.matchingTerm.no + 1,matchingWordStartTime: [...prevMatchingWordStartTime,startTime]},
       };
     });
   };
@@ -25,6 +30,7 @@ class Transcript extends Component {
     this.setState((prevState) => ({
       ...prevState,
       input: "",
+      matchingTerm:{no:0,matchingWordStartTime:[]}
     }));
   };
 
@@ -34,7 +40,7 @@ class Transcript extends Component {
     this.setState((prevState) => ({
       ...prevState,
       input: e?.target?.value,
-      matchingTermNo: 0,
+      matchingTerm:{no:0,matchingWordStartTime:[]}
     }));
   };
 
@@ -64,7 +70,7 @@ class Transcript extends Component {
       <div>
         <TranscriptSearch
           clearInput={this.clearInput}
-          matchingTermNo={this.state.matchingTermNo}
+          matchingTerm={this.state.matchingTerm}
           input={this.state.input}
           onInputChange={this.onInputChange}
         />

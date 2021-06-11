@@ -1,5 +1,6 @@
 //user percent=================
 .user-percent--container{
+  margin-top: 1.5rem;
   font-size: 1.5rem;
 }
 
@@ -46,7 +47,7 @@
 .waveform-timebar-container{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .wavebar-top-container{
@@ -55,7 +56,29 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+  padding:1rem 0;
+  //margin-top: 1rem;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    height:1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: theme-blue(0.7);
+  }
+
+  &::-webkit-scrollbar:vertical {
+    display: none;
+  }
 }
+
+
 
 
 .wavebar-container{

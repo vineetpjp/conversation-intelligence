@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TalkTimePercentage from "./TalkTimePercentage";
 import TimeStamp from "./TimeStamp";
 import WaveBar from "./WaveBar";
+import WindowResize from "../../WindowResize";
 
 class WaveForm extends Component {
   render() {
@@ -23,4 +24,4 @@ class WaveForm extends Component {
   }
 }
 
-export default WaveForm;
+export default WindowResize(WaveForm,'width');

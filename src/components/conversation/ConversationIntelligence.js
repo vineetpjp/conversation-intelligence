@@ -28,6 +28,7 @@ class ConversationIntelligence extends Component {
 
   setTime = (seconds) => {
     this.audioRef.current.currentTime = seconds;
+    this.setAudioState({currentTime:seconds})
   };
 
   togglePlaybackStatus = () => {

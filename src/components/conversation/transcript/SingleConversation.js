@@ -37,26 +37,30 @@ class SingleConversation extends PureComponent {
     return conversation.map((wordInfo, index) => {
       const { word } = wordInfo;
       const matchSearch = input && word.toLowerCase().includes(input);
+      const startTime = ConversationUtil.getTimeAsNumber(wordInfo.startTime);
       if (matchSearch) {
-        setMatchingTermNo();
+        setMatchingTermNo(startTime);
         conversationIncludesMatch = true;
       }
       if (length === index)
         this.checkToRemoveComponent(input, conversationIncludesMatch);
-      const startTime = ConversationUtil.getTimeAsNumber(wordInfo.startTime);
       const isActive = ConversationUtil.isWordActive(currentTime, wordInfo);
 
       return (
+          <>
         <span
-          onClick={() => setTime(startTime)}
+          onClick={() => {
+            setTime(startTime)
+          }}
           key={index}
           className={`conversation_word ${
             isActive ? "conversation_word--active" : ""
           } ${matchSearch ? "search_term" : ""}`}
         >
           {word}
-          {` `}
         </span>
+          <span>{' '}</span>
+          </>
       );
     });
   };

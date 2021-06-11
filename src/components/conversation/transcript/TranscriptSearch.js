@@ -2,7 +2,9 @@ import React, { PureComponent } from "react";
 
 class TranscriptSearch extends PureComponent {
   render() {
-    const { input, clearInput, matchingTermNo, onInputChange } = this.props;
+    const { input, clearInput, matchingTerm:{no}, onInputChange } = this.props;
+    const matchingTermNo = no;
+    const resultOrResults = matchingTermNo===1;//true result | false results
     return (
       <div className={"search-container"}>
         <div className={"search-input__container"}>
@@ -16,14 +18,17 @@ class TranscriptSearch extends PureComponent {
           />
         </div>
         <div className={"search-text"}>
-          {matchingTermNo ? `${matchingTermNo} results ` : ""}
+          {matchingTermNo ? `${matchingTermNo} ${resultOrResults?'result':'results'} ` : ""}
         </div>
-        <div
-          className={"search-text search-clear"}
-          onClick={() => clearInput()}
-        >
-          {input ? ". clear search" : ""}
-        </div>
+          {
+              input?(
+                  <div
+                      className={"search-text search-clear"}
+                      onClick={() => clearInput()}>
+                      clear search
+                  </div>
+              ):null
+          }
       </div>
     );
   }
