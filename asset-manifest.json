@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/conversation-intelligence/static/css/main.32087559.chunk.css",
+    "main.js": "/conversation-intelligence/static/js/main.3fdb7fc0.chunk.js",
+    "main.js.map": "/conversation-intelligence/static/js/main.3fdb7fc0.chunk.js.map",
+    "runtime-main.js": "/conversation-intelligence/static/js/runtime-main.12ce0426.js",
+    "runtime-main.js.map": "/conversation-intelligence/static/js/runtime-main.12ce0426.js.map",
+    "static/js/2.5e6757b6.chunk.js": "/conversation-intelligence/static/js/2.5e6757b6.chunk.js",
+    "static/js/2.5e6757b6.chunk.js.map": "/conversation-intelligence/static/js/2.5e6757b6.chunk.js.map",
+    "index.html": "/conversation-intelligence/index.html",
+    "static/css/main.32087559.chunk.css.map": "/conversation-intelligence/static/css/main.32087559.chunk.css.map",
+    "static/js/2.5e6757b6.chunk.js.LICENSE.txt": "/conversation-intelligence/static/js/2.5e6757b6.chunk.js.LICENSE.txt",
+    "static/media/59e106639d79684277df770d.9c487e16.wav": "/conversation-intelligence/static/media/59e106639d79684277df770d.9c487e16.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.12ce0426.js",
+    "static/js/2.5e6757b6.chunk.js",
+    "static/css/main.32087559.chunk.css",
+    "static/js/main.3fdb7fc0.chunk.js"
+  ]
+}
